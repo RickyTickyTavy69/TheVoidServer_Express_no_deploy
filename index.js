@@ -37,3 +37,7 @@ const start = async () => {
 start();
 
 app.use("/posts", postsroutes);
+
+app.get("/", (req, res) => {
+      res.status(200).json({message: "hello world"});
+})
