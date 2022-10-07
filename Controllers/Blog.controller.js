@@ -29,6 +29,10 @@ class BlogController{
             res.status(500).json({message: "es ist ein Fehler beim posts lesen", error: e});
         }
     }
+
+    static async test(req, res) {
+        res.status(200).json({message: "der test war erfolgreich"})
+    }
 }
 
 export default BlogController;

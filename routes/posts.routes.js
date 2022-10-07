@@ -11,8 +11,6 @@ router.post("/create", upload.single('image'), BlogController.create);
 
 router.get("/getAll", BlogController.getAll);
 
-router.get("/", (req, res) => {
-    res.status(200).json({message: "hallo hallo hallo lololo lololo"});
-});
+router.get("/test", BlogController.test);
 
 export default router;
