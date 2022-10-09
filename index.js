@@ -18,9 +18,9 @@ const PORT = process.env.PORT;
 const MongoUri = process.env.MONGOURI;
 
 //middleware
-app.use(morgan('dev'))
-app.use('/public', express.static('public'))
-app.use(cors())
+app.use(morgan('dev'));
+app.use('/public', express.static('public'));
+app.use(cors());
 app.use(bodyParser.json());
 
 

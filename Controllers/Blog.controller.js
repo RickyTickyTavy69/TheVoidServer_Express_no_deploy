@@ -1,12 +1,18 @@
 import PostModel from "../models/posts.model.js";
 
+
 // Dinge, die es nicht gibt:
 class BlogController{
 
     static async create(req, res){
         try{
+            console.log("@ create", req.body)
+            const host = req.hostname;
+            console.log("host", host, req.protocol);
+            const filePath = req.protocol + "://" + host + '/' + req.file.path;     // I must save filePath to the database
+            console.log("filePath", filePath);
             const post = {
-                image: req.file.path,
+                image: filePath,
                 songlink: req.body.songlink,
                 text: req.body.text,
             }
